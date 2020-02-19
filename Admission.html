@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admission Page</title><link rel="stylesheet" type="text/css" href="smit.css">
+	<script type="text/javascript">
+		function change()
+		{
+				parent.page2.location.href='Admission1.html';
+		}
+		function c1()
+		{
+				parent.page2.location.href='blank.html';
+		}
+		function onc(e)
+		{	
+	if(e==1)
+	{
+		window.document.forms.f1.Clist[0].text="Science";
+		window.document.forms.f1.Clist[0].value="1";
+		
+		window.document.forms.f1.Clist[1].text="Maths";
+		window.document.forms.f1.Clist[1].value="2";
+
+		window.document.forms.f1.Clist[2].text="biology";
+		window.document.forms.f1.Clist[2].value="3";
+	}
+
+		
+	else if(e==2)
+	{
+		window.document.forms.f1.Clist[0].text="IIT JEE";
+		window.document.forms.f1.Clist[0].value="1";
+		
+		window.document.forms.f1.Clist[1].text="Medical";
+		window.document.forms.f1.Clist[1].value="2";
+
+		window.document.forms.f1.Clist[2].text="CA";
+		window.document.forms.f1.Clist[2].value="3";
+		parent.page2.location.href='Admission2.html';
+		
+	}
+}
+function ch()
+{
+	window.open("in.html");
+}
+</script>
+</head>
+<body onload="c1()">
+<h1>Admission</h1>
+<Form name="f1">
+<input type="radio" name="Fy" value="1" onclick="onc(this.value);change()"/>Full year
+<input type="radio" name="Fy" value="2" onclick="onc(this.value)"/>Crash Course
+<h3>Select Subjects</h3>
+<select name="Clist">
+<option value="1"></option><option value="1"></option><option value="1"></option>
+</select><img src="b3.jpg" width="30px" height="25px" onclick="ch()">
+</form>
+
+</body>
+</html>
